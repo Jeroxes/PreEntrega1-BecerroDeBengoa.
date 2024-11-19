@@ -1,0 +1,13 @@
+{
+  "name": "primerapreentregajeronimobecerrodebengoa",
+  "version": "1.0.0",
+  "description": "PrimeraPreentrega",
+  "main": "app.js",
+  "type": "module",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jeronimo Becerro de Bengoa",
+  "license": "ISC"
+}
