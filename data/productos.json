@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Dildo",
+    "description": "largo",
+    "code": "239",
+    "price": "302",
+    "stock": "6",
+    "category": "juguete",
+    "status": true
+  },
+  {
+    "id": 2,
+    "title": "Dildo negro",
+    "description": "largo",
+    "code": "239",
+    "price": "302",
+    "stock": "6",
+    "category": "juguete",
+    "status": true
+  }
+]

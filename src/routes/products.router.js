@@ -5,6 +5,8 @@ const router = Router();
 
 const productManager = new ProductManager()
 
+
+
 router.get('/', async(req, res) => {
    try{
     const limit = req.query.limit ? parseInt(req.query.limit) : undefined
@@ -63,7 +65,7 @@ router.delete('/:pid', async(req, res) => {
         const productId=parseInt(req.params.pid);
         const deletedProduct= await productManager.deleteProduct(productId);
         if (deletedProduct){
-            res.json(deletedProduct);
+            res.status(200).json({message: 'Producto eliminado'})
         } else{
             res.status(404).json({error: 'Producto no encontrado'});
         }

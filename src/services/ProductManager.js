@@ -14,18 +14,18 @@ export default class ProductManager {
             const data = await fs.readFile(productosFilePath, 'utf-8');
             this.products = JSON.parse(data);
         } catch (error) {
+            console.log(error);
             this.products = [];
         }
     }
 
     async saveToFile(){
-        const jsonData = JSON.stringify(this.products, null, 2);
+       try{ const jsonData = JSON.stringify(this.products, null, 2);
         await fs.writeFile(productosFilePath, jsonData);
+        } catch (error){
+            console.log(error);  
+        }
     }
-
-
-
-
      async getAllProducts(limit) {
         if(limit){
             return this.products.slice(0, limit);
@@ -34,7 +34,13 @@ export default class ProductManager {
     }
 
     async getProductById(id){
-        return this.products.find(product => product.id === id);
+        try {
+        const product = this.products.find(product => product.id === id);
+
+            return product
+        } catch (error) {
+        console.log(error)
+        }
     }
 
     async addProduct(product) {
